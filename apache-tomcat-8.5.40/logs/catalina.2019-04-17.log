@@ -1,0 +1,80 @@
+17-Apr-2019 14:12:52.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.40
+17-Apr-2019 14:12:52.814 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 10 2019 14:31:19 UTC
+17-Apr-2019 14:12:52.814 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.40.0
+17-Apr-2019 14:12:52.815 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+17-Apr-2019 14:12:52.815 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-62-generic
+17-Apr-2019 14:12:52.815 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+17-Apr-2019 14:12:52.816 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+17-Apr-2019 14:12:52.817 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12
+17-Apr-2019 14:12:52.817 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+17-Apr-2019 14:12:52.817 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /software/docker-images/tomcat/apache-tomcat-8.5.40
+17-Apr-2019 14:12:52.818 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /software/docker-images/tomcat/apache-tomcat-8.5.40
+17-Apr-2019 14:12:52.819 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/software/docker-images/tomcat/apache-tomcat-8.5.40/conf/logging.properties
+17-Apr-2019 14:12:52.819 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Apr-2019 14:12:52.820 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+17-Apr-2019 14:12:52.821 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Apr-2019 14:12:52.821 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+17-Apr-2019 14:12:52.821 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+17-Apr-2019 14:12:52.822 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/software/docker-images/tomcat/apache-tomcat-8.5.40
+17-Apr-2019 14:12:52.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/software/docker-images/tomcat/apache-tomcat-8.5.40
+17-Apr-2019 14:12:52.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/software/docker-images/tomcat/apache-tomcat-8.5.40/temp
+17-Apr-2019 14:12:52.824 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+17-Apr-2019 14:12:53.027 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+17-Apr-2019 14:12:53.044 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1105)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:224)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:68)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+17-Apr-2019 14:12:53.048 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+17-Apr-2019 14:12:53.054 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Apr-2019 14:12:53.074 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1082 ms
+17-Apr-2019 14:12:53.131 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+17-Apr-2019 14:12:53.132 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.40
+17-Apr-2019 14:12:53.155 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/manager]
+17-Apr-2019 14:12:53.604 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/manager] has finished in [449] ms
+17-Apr-2019 14:12:53.605 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/examples]
+17-Apr-2019 14:12:54.012 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/examples] has finished in [406] ms
+17-Apr-2019 14:12:54.013 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/host-manager]
+17-Apr-2019 14:12:54.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/host-manager] has finished in [41] ms
+17-Apr-2019 14:12:54.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/docs]
+17-Apr-2019 14:12:54.073 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/docs] has finished in [18] ms
+17-Apr-2019 14:12:54.073 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/ROOT]
+17-Apr-2019 14:12:54.092 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/software/docker-images/tomcat/apache-tomcat-8.5.40/webapps/ROOT] has finished in [19] ms
+17-Apr-2019 14:12:54.096 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+17-Apr-2019 14:12:54.109 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1034 ms
+17-Apr-2019 14:13:15.981 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+17-Apr-2019 14:13:15.982 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+17-Apr-2019 14:13:15.982 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+17-Apr-2019 14:13:15.993 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+17-Apr-2019 14:13:16.043 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+17-Apr-2019 14:13:16.047 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+17-Apr-2019 14:13:16.047 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+17-Apr-2019 14:13:16.048 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
