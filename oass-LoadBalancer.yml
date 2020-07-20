@@ -6,9 +6,9 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 8000
+  - port: 80           > internet facing port when using service type as LoadBalancer
+    targetPort: 8000   > container port which you have exposed in you Dockerfile
     protocol: TCP
   selector:
-    run: oass
+    run: web
     
