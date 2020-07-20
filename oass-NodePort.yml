@@ -1,3 +1,4 @@
+# when running k8s cluster locally use : service types as NodePort with container port 31000 and image port 8000
 apiVersion: v1
 kind: Service
 metadata:
