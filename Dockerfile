@@ -7,7 +7,7 @@ RUN useradd red && groupadd redgrp && \
 
 WORKDIR /software/tomcat
 
-RUN curl -O https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz && tar -xvzf apache-tomcat-8.5.57.tar.gz && rm -rf apache-tomcat-8.5.57.tar.gz
+RUN curl -O https://downloads.apache.org/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.tar.gz && tar -xvzf apache-tomcat-8.5.57.tar.gz && rm -rf apache-tomcat-8.5.57.tar.gz
 
 # copy source code oass to container webapps
 COPY oass /software/tomcat/apache-tomcat-8.5.57/webapps/oass/
